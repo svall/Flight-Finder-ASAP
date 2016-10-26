@@ -1,0 +1,29 @@
+{
+  "name": "flight-mood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svall/Flight-Mood.git"
+  },
+  "author": "Susana Isaza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/svall/Flight-Mood/issues"
+  },
+  "homepage": "https://github.com/svall/Flight-Mood#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "dotenv": "^2.0.0",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.11",
+    "morgan": "^1.7.0",
+    "node-fetch": "^1.6.3",
+    "path": "^0.12.7"
+  }
+}
