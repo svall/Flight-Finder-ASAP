@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ASAP Flight</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <h1>Flight Search Results</h1>
+    <% for(let i = 0; i < flights.length; i++) { %>
+      <p><%= flights[i].destination %></p>
+    <% } %>
+</body>
+</html>
