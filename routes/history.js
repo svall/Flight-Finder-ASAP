@@ -9,7 +9,7 @@ router.get('/search/history', displaySavedFlights, (req, res) => {
 })
 
 router.delete('/search/history/:id', deleteSavedFlight, (req, res) => {
-  res.redirect('/')
+  res.redirect('/search/history')
 })
 
 module.exports = router;

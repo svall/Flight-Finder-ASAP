@@ -1,12 +1,12 @@
 const { MongoClient } = require('mongodb');
-const { ObjectId } = require('mongodb');
+const { ObjectID } = require('mongodb');
 
 const dbConnection = 'mongodb://localhost:27017/flight_search';
 
 function saveFlight(req, res, next) {
   MongoClient.connect(dbConnection, (err, db) => {
     if (err) return next(err);
-    // console.log(req.body.trips);
+    console.log(req.body.trips);
     db.collection('trips')
       .insert(req.body.trips, (inErr, flightsaved) => {
         if (inErr) return next(inErr);
@@ -43,7 +43,7 @@ function deleteSavedFlight(req, res, next) {
     if (err) return next(err);
     // console.log(req.params.id);
     db.collection('trips')
-      .findAndRemove({ _id: ObjectId(req.params.id) }, (rerr, doc) => {
+      .findAndRemove({ _id: ObjectID(req.params.id) }, (rerr, doc) => {
         if (rerr) return next(rerr);
 
         res.deleted = doc;
