@@ -24,11 +24,21 @@
     <div class="flightDisplayContainer">
       <% for (let i = 0; i < 5; i++) { %>
         <div class="selectedBox" id="selectedBox0">
-          <p class="selectedFlight" id="selectedFlight0">Destination: <%= flights[i].destination %><br>
-          Departure: <%= flights[i].departure_date %><br>
-          Return: <%= flights[i].return_date %><br>
-          Price: $<%= flights[i].price %></p><br>
-          <input type="submit" id="saveButton<%= i %>" class="saveButton" value="SAVE">
+          <form class="saveFlight" action="/search/save" method="POST">
+            <p class="selectedFlight" id="selectedFlight0">Destination: <%= flights[i].destination %><br>
+            Departure: <%= flights[i].departure_date %><br>
+            Return: <%= flights[i].return_date %><br>
+            Price: $<%= flights[i].price %></p><br>
+            <label> Reminders/Comments:
+              <input type="text" name="reminders">
+            </label>
+            <input type="hidden" name="trips[origin]" value="<%= origin %>">
+            <input type="hidden" name="trips[destination]" value="<%= flights[i].destination %>">
+            <input type="hidden" name="trips[departure_date]" value="<%= flights[i].departure_date %>">
+            <input type="hidden" name="trips[return]" value="<%= flights[i].return_date %>">
+            <input type="hidden" name="trips[price]" value="<%= flights[i].price %>">
+            <input type="submit" id="saveButton<%= i %>" class="saveButton" value="SAVE">
+          </form>
         </div>
       <% } %>
     </div>

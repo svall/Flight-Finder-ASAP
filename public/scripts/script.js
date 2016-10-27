@@ -7,7 +7,7 @@ $(document).ready(() => {
   $('#displayInfoButton0').click(function(event) {
     console.log('0');
     // $('.selectedFlight').toggle();
-    $('.selectedFlight0').css('visibility', 'visible');
+    $('#selectedFlight0').css('visibility', 'visible');
     $('#saveButton0').css('visibility', 'visible');
   });
   //   $('.displayInfoButton').click(function(event) {
