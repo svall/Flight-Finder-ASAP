@@ -2,6 +2,7 @@
 const express = require('express');
 const logger = require('morgan');
 const path = require('path');
+const dotenv = require('dotenv').config();
 // const bodyParser = require('body-parser');
 // const methodOverride = require('method-override');
 

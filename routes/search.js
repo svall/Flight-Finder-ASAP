@@ -1,10 +1,11 @@
 const router = require('express').Router();
 const { searchFlights } = require('../services/flights');
 
-router.get('/', searchFlights, (req, res) => {
-  res.render('./search', {
-    flights: res.results || [],
-  });
+router.get('/search', searchFlights, (req, res) => {
+  console.log(res.results);
+  res.render('search', {
+    flights: res.results,
+  })
 })
 
 
