@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { searchFlights } = require('../services/flights');
-const { saveFlight } = require('../models/flights');
+const { saveFlight, displaySavedFlights } = require('../models/flights');
 
 router.get('/search', searchFlights, (req, res) => {
   // console.log(res.results);
@@ -10,8 +10,9 @@ router.get('/search', searchFlights, (req, res) => {
   })
 })
 
-router.post('/search/save', saveFlight, (req, res) => {
-  res.redirect('/');
+router.post('/search/history', saveFlight, (req, res) => {
+  res.redirect('./history');
 })
+
 
 module.exports = router;
