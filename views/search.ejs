@@ -9,12 +9,13 @@
 </head>
 <body>
   <h1>Flight Search Results</h1>
-  <h2><%# flights[1] %></h2>
-    <%# for(let i = 0; i < flights.length; i++) { %>
-      <p>Destination: <%# flights[i].destination %></p>
-      <p>Departure: <%# flights[i].departure_date %></p>
-      <p>Return: <%# flights[i].return_date %></p>
-      <p>Price: <%# flights[i].price %></p>
-    <%# } %>
+  <h2>Flights leaving from: <%= origin %></h2>
+    <% for (let i = 0; i < flights.length; i++) { %>
+      <p>Destination: <%= flights[i].destination %><br>
+      Departure: <%= flights[i].departure_date %><br>
+      Return: <%= flights[i].return_date %><br>
+      Price: <%= flights[i].price %><br>
+      <input type="submit" value="Select"></p>
+    <% } %>
 </body>
 </html>
