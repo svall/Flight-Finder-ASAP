@@ -1,5 +1,5 @@
 const { MongoClient } = require('mongodb');
-const { ObjectID } = require('mongodb');
+const { ObjectId } = require('mongodb');
 
 const dbConnection = 'mongodb://localhost:27017/flight_search';
 
@@ -38,4 +38,23 @@ function displaySavedFlights(req, res, next) {
   return false;
 }
 
-module.exports = { saveFlight, displaySavedFlights };
+function deleteSavedFlight(req, res, next) {
+  MongoClient.connect(dbConnection, (err, db) => {
+    if (err) return next(err);
+    // console.log(req.params.id);
+    db.collection('trips')
+      .findAndRemove({ _id: ObjectId(req.params.id) }, (rerr, doc) => {
+        if (rerr) return next(rerr);
+
+        res.deleted = doc;
+        db.close();
+        return next();
+      });
+      return false;
+  });
+  return false;
+}
+
+
+
+module.exports = { saveFlight, displaySavedFlights, deleteSavedFlight };
