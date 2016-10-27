@@ -10,12 +10,23 @@
 <body>
   <h1>Flight Search Results</h1>
   <h2>Flights leaving from: <%= origin %></h2>
-    <% for (let i = 0; i < flights.length; i++) { %>
-      <p>Destination: <%= flights[i].destination %><br>
-      Departure: <%= flights[i].departure_date %><br>
-      Return: <%= flights[i].return_date %><br>
-      Price: <%= flights[i].price %><br>
-      <input type="submit" value="Select"></p>
-    <% } %>
+  <div id="flightBoard">
+    <div class="flightSearchContainer">
+      <% for (let i = 0; i < flights.length; i++) { %>
+        <p class="eachFlightInfo">Destination: <%= flights[i].destination %><br>
+        Departure: <%= flights[i].departure_date %><br>
+        Return: <%= flights[i].return_date %><br>
+        Price: $<%= flights[i].price %><br>
+        <input type="submit" value="See Details"></p>
+      <% } %>
+    </div>
+    <div class="flightDisplayContainer">
+        <p class="selectedFlight">Destination: <%= flights[1].destination %><br>
+        Departure: <%= flights[1].departure_date %><br>
+        Return: <%= flights[1].return_date %><br>
+        Price: $<%= flights[1].price %><br>
+        <input type="submit" value="SAVE"></p>
+    </div>
+  </div>
 </body>
 </html>
