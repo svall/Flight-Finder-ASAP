@@ -1,7 +1,7 @@
-h1 {
+/*h1 {
   color: green;
 }
-
+*/
 #flightBoard {
   background-color: lightgreen;
   /*width: 800px;*/
@@ -13,22 +13,47 @@ h1 {
 .flightSearchContainer {
   background-color: lightblue;
   display: inline-block;
-  width: 300px;
+  width: 400px;
 }
 
-.eachFlightInfo {
-  background-color: lightyellow;
-  border: 2px solid black;
+.flightBox {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /*margin: auto;*/
+  /*text-align: center;*/
+}
+
+.eachDest {
+  /*background-color: lightyellow;*/
+  display: inline-block;
+  width: 50%;
+  margin-left: 10px;
+}
+
+.buttonArea {
+  display: inline-block;
+  /*background-color: red;*/
+  margin: auto;
+}
+
+.displayInfoButton {
+  font-size: 30px;
 }
 
 .flightDisplayContainer {
   background-color: aqua;
   display: inline-block;
   float: top;
-  width: 300px;
+  width: 500px;
 }
 
 .selectedFlight {
   background-color: yellow;
+}
 
+.selectedBox {
+  visibility: hidden;
+  position: absolute;
 }

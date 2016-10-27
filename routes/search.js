@@ -3,7 +3,7 @@ const { searchFlights } = require('../services/flights');
 
 router.get('/search', searchFlights, (req, res) => {
   // console.log(res.results);
-  res.render('search', {
+  res.render('./search', {
     flights: res.flightresults,
     origin: res.origin,
   })
