@@ -5,7 +5,7 @@ $(document).ready(() => {
   console.log("JQuery ok");
 
   $('#displayInfoButton0').click(function(event) {
-    console.log('0');
+    // console.log('0');
     // $('.selectedFlight').toggle();
     $('#selectedFlight0').css('visibility', 'visible');
     $('#saveButton0').css('visibility', 'visible');
@@ -22,6 +22,9 @@ $(document).ready(() => {
   //   $('.saveButton').css('visibility', 'visible');
   // });
 
+  $('.editButton').click(function(event) {
+    $('.reminderBox').toggle();
+  });
 
 });
 

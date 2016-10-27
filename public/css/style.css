@@ -87,4 +87,5 @@
 .reminderBox {
   height: 50px;
   width: 300px;
+  display: none;
 }

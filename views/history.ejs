@@ -21,15 +21,15 @@
         Return: <%= savedFlights[i].return_date %><br>
         Price: $<%= savedFlights[i].price %><br>
         Reminders: <%= savedFlights[i].reminders %><br>
-        <input type="submit" class="updateButton" value="EDIT">
+        <input type="submit" class="editButton" value="EDIT REMINDER">
         <form class="delete-flight" action="/search/history/<%= savedFlights[i]._id %>?_method=DELETE" method="post">
-          <input type="submit" value="DELETE">
+          <input type="submit" value="DELETE TRIP">
         </form>
       </div>
-      <form class="userHistory" action="/search/history" method="POST">
+      <form class="editHistory" action="/search/history/<%= savedFlights[i]._id %>?_method=PUT" method="POST">
         <div class="updateBox">
           <label> Edit Reminder:
-            <input type="text" class="reminderBox" name="reminders">
+            <input type="text" class="reminderBox" name="trips[reminders]">
           </label></p>
           <input type="submit" class="updateButton" value="UPDATE">
         </div>
