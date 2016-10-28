@@ -1,15 +1,15 @@
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
-  res.render('./users/index');
+  res.render('./index');
 })
 
 router.get('/login', (req, res) => {
-  res.render('./users/login');
+  res.render('./login');
 })
 
 router.get('/signup', (req, res) => {
-  res.render('./users/signup');
+  res.render('./signup');
 })
 
 
