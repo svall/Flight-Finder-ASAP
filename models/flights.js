@@ -65,7 +65,7 @@ function editSavedFlights (req, res, next) {
         if (editErr) return next(editErr);
 
         res.edited = doc;
-        console.log(res.edited);
+        // console.log(res.edited);
         db.close();
         return next();
       });

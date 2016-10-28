@@ -10,6 +10,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // require routes
+const indexRoute = require('./routes/index');
 const homeRoute = require('./routes/home');
 const searchRoute = require('./routes/search');
 const historyRoute = require('./routes/history');
@@ -25,6 +26,7 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 // links to route files to views:
+app.use('/', indexRoute);
 app.use('/', homeRoute);
 app.use('/', searchRoute);
 app.use('/', historyRoute);
