@@ -154,8 +154,15 @@
   display: inline-block;
 }
 
-.reminderBox {
+.reminderBox0 {
   height: 50px;
   width: 300px;
-  display: none;
+  /*display: none;*/
 }
+/*edit info*/
+#editButton0 {
+  background-color: yellow;
+  /*display: none;*/
+  position: absolute;
+}
+

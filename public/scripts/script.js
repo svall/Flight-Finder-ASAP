@@ -25,26 +25,26 @@ $(document).ready(() => {
     $('#saveButton3').toggle();
   });
   $('#displayInfoButton4').click(function(event) {
-    // console.log('0');
+    // console.log('4');
     $('#selectedFlight4').toggle();
     $('#saveButton4').toggle();
   });
 
-  //   $('.displayInfoButton').click(function(event) {
-  //   // alert('ok');
-  //   $('.selectedFlight').css('visibility', 'hidden');
-  //   $('.saveButton').css('visibility', 'hidden');
-  // });
-  // button 1:
-  // $('.displayInfoButton').click(function(event) {
-  //   console.log('1');
-  //   $('.selectedFlight').css('visibility', 'visible');
-  //   $('.saveButton').css('visibility', 'visible');
-  // });
+// for (let i = 0 ; i < 5 ; i++) {
+//   $('#displayInfoButton' + i).click(function(event) {
+//     $('#selectedFlight' + i).toggle();
+//     $('#saveButton' + i).toggle();
+//   })
+// }
 
-  $('.editButton').click(function(event) {
-    $('.reminderBox').toggle();
+  $('#editButton0').click(function(event) {
+    $('#reminderBox0').toggle();
   });
 
+  // for (let i = 0 ; i < 5 ; i++) {
+  //   $('#editButton' + toString(i)).click(function(event) {
+  //     $('#reminderBox' + toString(i)).toggle();
+  //   });
+  // }
 });
 
