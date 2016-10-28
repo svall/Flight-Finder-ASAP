@@ -1,7 +1,30 @@
-/*h1 {
-  color: green;
+* {
+  font-family: 'ABeeZee', sans-serif;
 }
-*/
+
+
+/*-----Home Page-----*/
+.formcontainer {
+  background-color: #b1fcb1;
+  padding-top: 10px;
+  text-align: center;
+}
+.homeh2 {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 25px;
+}
+.homelabel {
+  font-size: 30px;
+
+}
+.homeinputs {
+  font-size: 20px;
+  margin: 5px 0 25px 0;
+}
+
+
+/*-----Search Results Page-----*/
 #flightBoard {
   background-color: lightgreen;
   /*width: 800px;*/
@@ -43,22 +66,69 @@
 }
 
 .flightDisplayContainer {
-  background-color: aqua;
+  /*background-color: aqua;*/
   display: inline-block;
+  margin: 20px 30px;
   float: top;
   width: 500px;
 }
-
-.selectedFlight {
-  background-color: yellow;
-}
-
-.selectedBox {
-  visibility: hidden;
+/*flight0*/
+#selectedFlight0 {
+  /*background-color: yellow;*/
+  display: none;
   position: absolute;
 }
+#saveButton0 {
+  display: none;
+  position: absolute;
+  right: 50px;
+}
+/*flight1*/
+#selectedFlight1 {
+  /*background-color: yellow;*/
+  display: none;
+  position: absolute;
+}
+#saveButton1 {
+  display: none;
+  position: absolute;
+  right: 50px;
+}
+/*flight2*/
+#selectedFlight2 {
+  /*background-color: yellow;*/
+  display: none;
+  position: absolute;
+}
+#saveButton2 {
+  display: none;
+  position: absolute;
+  right: 50px;
+}
+/*flight3*/
+#selectedFlight3 {
+  /*background-color: yellow;*/
+  display: none;
+  position: absolute;
+}
+#saveButton3 {
+  display: none;
+  position: absolute;
+  right: 50px;
+}
+/*flight4*/
+#selectedFlight4 {
+  /*background-color: yellow;*/
+  display: none;
+  position: absolute;
+}
+#saveButton4 {
+  display: none;
+  position: absolute;
+  right: 50px;
+}
 
-/*Update history*/
+/*-----History Page-----*/
 .historyDisplayContainer {
   background-color: lightgreen;
   border: 1px solid black;

@@ -41,7 +41,7 @@ function displaySavedFlights(req, res, next) {
 function deleteSavedFlight(req, res, next) {
   MongoClient.connect(dbConnection, (err, db) => {
     if (err) return next(err);
-    // console.log(req.params.id);
+    // console.log('this is deleting', req.params.id);
     db.collection('trips')
       .findAndRemove({ _id: ObjectID(req.params.id) }, (rerr, doc) => {
         if (rerr) return next(rerr);
@@ -58,13 +58,14 @@ function deleteSavedFlight(req, res, next) {
 function editSavedFlights (req, res, next) {
   MongoClient.connect(dbConnection, (err, db) => {
     if (err) return next(err);
-    console.log('this is the edits req ', req.params.id);
+    // console.log('this is the edits req ', req.params.id);
     db.collection('trips')
-      .findAndModify({ _id: ObjectID(req.params.id) },
-        { $set: req.body.trips }, { new: true }, (editErr, doc) => {
+      .findAndModify({ _id: ObjectID(req.params.id) }, [],
+        { $set: req.body.edit }, { new: true }, (editErr, doc) => {
         if (editErr) return next(editErr);
 
         res.edited = doc;
+        console.log(res.edited);
         db.close();
         return next();
       });

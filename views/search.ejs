@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js" charset="utf-8"></script>
   <script src="/scripts/script.js" type="text/javascript"></script>
+  <link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet">
 </head>
 <body>
   <a href="/">New Search</a>
@@ -24,9 +25,9 @@
     </div>
     <div class="flightDisplayContainer">
       <% for (let i = 0; i < 5; i++) { %>
-        <div class="selectedBox" id="selectedBox0">
+        <div class="selectedBox" id="selectedBox<%= i %>">
           <form class="saveFlight" action="/search/history" method="POST">
-            <p class="selectedFlight" id="selectedFlight0">Destination: <%= flights[i].destination %><br>
+            <p class="selectedFlight" id="selectedFlight<%= i %>">Destination: <%= flights[i].destination %><br>
             Departure: <%= flights[i].departure_date %><br>
             Return: <%= flights[i].return_date %><br>
             Price: $<%= flights[i].price %><br>

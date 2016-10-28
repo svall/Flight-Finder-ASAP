@@ -8,11 +8,11 @@ router.get('/search/history', displaySavedFlights, (req, res) => {
   })
 })
 
-router.put('search/history/:id', editSavedFlights, (req, res) => {
+router.put('/search/history/:id', editSavedFlights, (req, res) => {
   res.redirect('/search/history')
 })
 
-router.delete('/:id', deleteSavedFlight, (req, res) => {
+router.delete('/search/history/:id', deleteSavedFlight, (req, res) => {
   res.redirect('/search/history')
 })
 
