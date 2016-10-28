@@ -147,22 +147,114 @@
   margin: 0 10px;
 }
 
-.updateBox {
+/*edit & update elements*/
+.allDeleteButtons {
+  font-size: 13px;
+}
+.allUpdateBoxes {
   /*background-color: green;*/
   width: 310px;
   margin: 10px;
-  display: inline-block;
 }
+.allEditButtons {
+  font-size: 13px;
+}
+.allUpdateButtons {
+  /*background-color: yellow;*/
+  display: none;
+  font-size: 13px;
+}
+.allEditLabels {
+  /*color: red;*/
+  display: none;
+  font-size: 20px;
+}
+.allUpdateBoxes {
 
-.reminderBox0 {
+}
+.allReminderBoxes {
   height: 50px;
   width: 300px;
-  /*display: none;*/
+  display: none;
 }
-/*edit info*/
-#editButton0 {
+
+
+
+/*edit 0*/
+.editLabel0 {
+/*  color: red;
+  display: none;*/
+}
+.reminderBox0 {
+/*  height: 50px;
+  width: 300px;
+  display: none;*/
+}
+.updateButton0 {
+/*  background-color: yellow;
+  display: none;*/
+}
+/*edit 1*/
+/*
+.editLabel1 {
+  color: red;
+  display: none;
+}
+.reminderBox1 {
+  height: 50px;
+  width: 300px;
+  display: none;
+}
+.updateButton1 {
   background-color: yellow;
-  /*display: none;*/
-  position: absolute;
+  display: none;
 }
+/*edit 2*/
+/*
+.editLabel2 {
+  color: red;
+  display: none;
+}
+.reminderBox2 {
+  height: 50px;
+  width: 300px;
+  display: none;
+}
+.updateButton2 {
+  background-color: yellow;
+  display: none;
+}
+*/
+/*edit 3*/
+/*
+.editLabel3 {
+  color: red;
+  display: none;
+}
+.reminderBox3 {
+  height: 50px;
+  width: 300px;
+  display: none;
+}
+.updateButton3 {
+  background-color: yellow;
+  display: none;
+}
+*/
+/*edit 4*/
+/*
+.editLabel4 {
+  color: red;
+  display: none;
+}
+.reminderBox4 {
+  height: 50px;
+  width: 300px;
+  display: none;
+}
+.updateButton4 {
+  background-color: yellow;
+  display: none;
+}
+*/
 

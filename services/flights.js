@@ -10,7 +10,7 @@ function searchFlights(req, res, next) {
   .then(r => r.json())
   .then((data) => {
     // console.log('this is services', data.results[0].price);
-
+    // calcTax() adds 7.5% tax to the search price
     function calcTax() {
       const price = [];
       for (let i = 0; i < 5; i++) {
@@ -28,7 +28,7 @@ function searchFlights(req, res, next) {
     res.flightresults = data.results;
     res.origin = data.origin;
     res.price = calcTax();
-    console.log('this passes to routes ', res.price);
+    // console.log('this passes to routes ', res.price);
     next();
   })
   .catch((err) => {
