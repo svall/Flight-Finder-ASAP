@@ -30,7 +30,7 @@
             <p class="selectedFlight" id="selectedFlight<%= i %>">Destination: <%= flights[i].destination %><br>
             Departure: <%= flights[i].departure_date %><br>
             Return: <%= flights[i].return_date %><br>
-            Price: $<%= flights[i].price %><br>
+            Price: $<%= price[i] %><br>
             <label> Reminders/Comments:
               <input type="text" id="reminderBox" name="trips[reminders]">
             </label></p>
@@ -38,7 +38,7 @@
             <input type="hidden" name="trips[destination]" value="<%= flights[i].destination %>">
             <input type="hidden" name="trips[departure_date]" value="<%= flights[i].departure_date %>">
             <input type="hidden" name="trips[return_date]" value="<%= flights[i].return_date %>">
-            <input type="hidden" name="trips[price]" value="<%= flights[i].price %>">
+            <input type="hidden" name="trips[price]" value="<%= price[i] %>">
             <input type="submit" id="saveButton<%= i %>" class="saveButton" value="SAVE">
           </form>
         </div>

@@ -7,6 +7,7 @@ router.get('/search', searchFlights, (req, res) => {
   res.render('./search', {
     flights: res.flightresults,
     origin: res.origin,
+    price: res.price,
   })
 })
 
