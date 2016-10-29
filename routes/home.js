@@ -1,11 +1,12 @@
-const router = require('express').Router();
-const userModel = require('../models/users');
+// const router = require('express').Router();
+// const { userModel } = require('../models/users');
+// const { authenticate } = require('../lib/auth');
 
-router.get('/home', (req, res) => {
-  res.render('./home', {
-    intro: "<username here>",
-    // intro2: intro,
-  });
-})
+// router.get('/home', authenticate, (req, res) => {
+//   res.render('./home', {
+//     user: user.username,
+//     // intro2: intro,
+//   });
+// })
 
-module.exports = router;
+// module.exports = router;

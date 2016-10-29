@@ -3,13 +3,13 @@
 const router = require('express').Router();
 const { createUser } = require('../models/users.js');
 const { authenticate } = require('../lib/auth');
-
+// const { userModel } = require('../models/users');
 
 // Creates a new user by handling the POST request from a form with action `/users`
 // It uses the createUser middleware from the user model
 
-router.post('/', createUser, (req, res) => {
-  res.redirect('./history');
+router.post('/users', createUser, (req, res) => {
+  res.redirect('/');
 })
 
 /*
@@ -17,10 +17,11 @@ router.post('/', createUser, (req, res) => {
  * It redirects to /login when attempted to be reached by a non logged in user
  * It is "protected" by the authenticate middleware from the auth library
  */
-router.get('/history', authenticate, (req, res) => {
-  res.render('./users'), {
+router.get('/home', authenticate, (req, res) => {
+  res.render('./home', {
     user: res.user
-  };
+  })
+    console.log('this is the user in route ', res.user);
 })
 
 module.exports = router;

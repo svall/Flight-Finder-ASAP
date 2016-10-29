@@ -11,7 +11,8 @@ const { logIn } = require('../lib/auth');
  */
 
 router.post('/auth', logIn, (req, res) => {
-  res.redirect('/history');
+  console.log('logged in');
+  res.redirect('/home');
 })
 
 router.delete('/auth', (req, res) => {

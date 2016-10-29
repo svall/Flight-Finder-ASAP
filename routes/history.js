@@ -1,11 +1,12 @@
 const router = require('express').Router();
-// const { authenticate } = require('../lib/auth');
+const { authenticate } = require('../lib/auth');
+const { searchFlights } = require('../services/flights');
 const { displaySavedFlights, deleteSavedFlight, editSavedFlights } = require('../models/flights');
 
-router.get('/history', /*authenticate,*/ displaySavedFlights, (req, res) => {
+router.get('/history', authenticate, displaySavedFlights, (req, res) => {
   // console.log(res.savedflights);
   res.render('./history', {
-    savedFlights: res.savedflights,
+    savedFlights: res.savedflights || [],
   })
 })
 

@@ -6,13 +6,14 @@ const { saveFlight, displaySavedFlights } = require('../models/flights');
 router.get('/search', searchFlights, (req, res) => {
   // console.log(res.results);
   res.render('./search', {
-    flights: res.flightresults,
-    origin: res.origin,
-    price: res.price,
+    // user: res.user,
+    flights: res.flightresults || [],
+    origin: res.origin || [],
+    price: res.price || [],
   })
 })
 
-router.post('/history', /*authenticate,*/ saveFlight, (req, res) => {
+router.post('/search/history', saveFlight, (req, res) => {
   res.redirect('./history');
 })
 

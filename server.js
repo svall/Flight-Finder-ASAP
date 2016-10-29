@@ -16,7 +16,7 @@ const SECRET = 'tacos3000';
 // require routes
 const authRouter = require('./routes/auth');
 const historyRoute = require('./routes/history');
-const homeRoute = require('./routes/home');
+// const homeRoute = require('./routes/home');
 const indexRoute = require('./routes/index');
 const searchRoute = require('./routes/search');
 const usersRouter = require('./routes/users');
@@ -43,9 +43,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // links to route files to views:
 app.use('/', indexRoute);
-app.use('/auth', authRouter);
-app.use('/users', usersRouter);
-app.use('/', homeRoute);
+app.use('/', authRouter);
+app.use('/', usersRouter);
+// app.use('/', homeRoute);
 app.use('/', searchRoute);
 app.use('/', historyRoute);
 

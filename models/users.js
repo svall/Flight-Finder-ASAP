@@ -18,12 +18,12 @@ function createUser(req, res, next) {
     db.collection('users')
       .insert(userObject, (insErr, dbUser) => {
         if (insErr) return next(insErr);
-
+        // console.log(dbUser);
         res.user = dbUser;
         db.close();
         return next();
-      })
-  })
+      });
+  });
 }
 
 function getUserById(id) {
@@ -32,6 +32,7 @@ function getUserById(id) {
       db.collection('users')
         .findOne({ _id: ObjectID(id) }, (findError, user) => {
           if (findError) reject(findError);
+          console.log('this is getuserby id ',user);
           db.close();
           resolve(user);
         });
@@ -46,6 +47,7 @@ function getUserByUsername(username) {
       db.collection('users')
         .findOne({ username }, (findError, user) => {
           if (findError) reject(findError);
+          console.log('this is getuserby username ',user);
           db.close();
           resolve(user);
         });

@@ -13,8 +13,12 @@
 <body>
   <h1>FLIGHT SEARCH</h1>
   <a href="/history">User History</a>
+  <form action="/auth?_method=DELETE" method="post">
+    <input type="submit" value="Logout">
+  </form>
   <hr>
-    <h1>Welcome! <%= intro %></h1>
+    <h1>Welcome!</h1>
+    <h1>User: <%= user.username %></h1>
     <h2 class="homeh2">ENTER SEARCH DETAILS</h2>
     <div class="formcontainer">
       <form action="/search" method="get">
