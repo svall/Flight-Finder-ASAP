@@ -15,10 +15,10 @@ const SECRET = 'tacos3000';
 
 // require routes
 const authRouter = require('./routes/auth');
-const historyRoute = require('./routes/history');
+// const historyRoute = require('./routes/history');
 // const homeRoute = require('./routes/home');
 const indexRoute = require('./routes/index');
-const searchRoute = require('./routes/search');
+// const searchRoute = require('./routes/search');
 const usersRouter = require('./routes/users');
 
 // set up views
@@ -46,8 +46,8 @@ app.use('/', indexRoute);
 app.use('/', authRouter);
 app.use('/', usersRouter);
 // app.use('/', homeRoute);
-app.use('/', searchRoute);
-app.use('/', historyRoute);
+// app.use('/', searchRoute);
+// app.use('/', historyRoute);
 
 // set up server port listener
 app.listen(port, () => console.log('Server running on port ', port));

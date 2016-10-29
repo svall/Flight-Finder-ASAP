@@ -1,21 +1,22 @@
-const router = require('express').Router();
-const { authenticate } = require('../lib/auth');
-const { searchFlights } = require('../services/flights');
-const { displaySavedFlights, deleteSavedFlight, editSavedFlights } = require('../models/flights');
+// const router = require('express').Router();
+// const { authenticate } = require('../lib/auth');
+// const { searchFlights } = require('../services/flights');
+// const { userModel } = require('../models/users');
+// const { displaySavedFlights, deleteSavedFlight, editSavedFlights } = require('../models/flights');
 
-router.get('/history', authenticate, displaySavedFlights, (req, res) => {
-  // console.log(res.savedflights);
-  res.render('./history', {
-    savedFlights: res.savedflights || [],
-  })
-})
+// router.get('/history', authenticate, displaySavedFlights, (req, res) => {
+//   // console.log(res.savedflights);
+//   res.render('./history', {
+//     savedFlights: res.savedflights || [],
+//   })
+// })
 
-router.put('/history/:id', editSavedFlights, (req, res) => {
-  res.redirect('/history')
-})
+// router.put('/history/:id', editSavedFlights, (req, res) => {
+//   res.redirect('/history')
+// })
 
-router.delete('/history/:id', deleteSavedFlight, (req, res) => {
-  res.redirect('/history')
-})
+// router.delete('/history/:id', deleteSavedFlight, (req, res) => {
+//   res.redirect('/history')
+// })
 
-module.exports = router;
+// module.exports = router;
