@@ -3,24 +3,42 @@
   <head>
     <meta charset="utf-8">
     <title>Profile</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js" charset="utf-8"></script>
+    <script src="/scripts/script.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet">
   </head>
   <body>
-    <h1>Welcome! <%= user.username %></h1>
     <a href="/home">Flight Search</a>
+    <h1>Welcome! <%= user.username %></h1>
     <form action="/auth?_method=DELETE" method="post">
       <input type="submit" value="Logout">
     </form>
-
-
-
-
-
-
-
-
-
-
-
-
+    <hr>
+    <% for (let i = 0; i < savedFlights.length; i++) { %>
+      <div class="historyDisplayContainer">
+        <div class="userInfoHistory">
+          <p>Origin: <%= savedFlights[i].origin %></p>
+          Destination: <%= savedFlights[i].destination %><br>
+          Departure: <%= savedFlights[i].departure_date %><br>
+          Return: <%= savedFlights[i].return_date %><br>
+          Price: $<%= savedFlights[i].price %><br>
+          Reminders: <%= savedFlights[i].reminders %><br>
+          <input type="submit" class="editButton<%= i %> allEditButtons" value="EDIT REMINDER">
+          <form class="delete-flight" action="/search/history/<%= savedFlights[i]._id %>?_method=DELETE" method="POST">
+            <input type="submit" class="allDeleteButtons" value="DELETE TRIP">
+          </form>
+        </div>
+        <form class="editHistory" action="/search/history/<%= savedFlights[i]._id %>?_method=PUT" method="POST">
+          <div class="updateBox<%= i %> allUpdateBoxes">
+            <label class="editLabel<%= i %> allEditLabels"> Edit Reminder:<br>
+              <input type="text" class="reminderBox<%= i %> allReminderBoxes" name="edit[reminders]">
+            </label></p>
+            <input type="submit" class="updateButton<%= i %> allUpdateButtons" value="UPDATE">
+          </div>
+        </form>
+      </div>
+    <% } %>
   </body>
 </html>

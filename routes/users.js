@@ -17,8 +17,8 @@ router.post('/', createUser, (req, res) => {
  * It redirects to /login when attempted to be reached by a non logged in user
  * It is "protected" by the authenticate middleware from the auth library
  */
-router.get('/search/history', authenticate, (req, res) => {
-  res.render('./history'), {
+router.get('/history', authenticate, (req, res) => {
+  res.render('./users'), {
     user: res.user
   };
 })

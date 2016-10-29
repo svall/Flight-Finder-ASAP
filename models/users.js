@@ -10,6 +10,7 @@ const SALTROUNDS = 10;
 function createUser(req, res, next) {
   const userObject = {
     username: req.body.user.username,
+    // email: req.body.user.email,
     password: bcrypt.hashSync(req.body.user.password, SALTROUNDS)
   };
 

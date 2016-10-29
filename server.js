@@ -14,11 +14,11 @@ const port = process.env.PORT || 3000;
 const SECRET = 'tacos3000';
 
 // require routes
-const indexRoute = require('./routes/index');
-const homeRoute = require('./routes/home');
-const searchRoute = require('./routes/search');
-const historyRoute = require('./routes/history');
 const authRouter = require('./routes/auth');
+const historyRoute = require('./routes/history');
+const homeRoute = require('./routes/home');
+const indexRoute = require('./routes/index');
+const searchRoute = require('./routes/search');
 const usersRouter = require('./routes/users');
 
 // set up views

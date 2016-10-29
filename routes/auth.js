@@ -10,11 +10,11 @@ const { logIn } = require('../lib/auth');
  * and save the user to the database
  */
 
-router.post('/', logIn, (req, res) => {
-  res.redirect('./history');
+router.post('/auth', logIn, (req, res) => {
+  res.redirect('/history');
 })
 
-router.delete('/', (req, res) => {
+router.delete('/auth', (req, res) => {
   req.session.userId = null;
   res.redirect('/');
 })
