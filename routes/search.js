@@ -1,4 +1,5 @@
 const router = require('express').Router();
+// const { authenticate }    = require('../lib/auth');
 const { searchFlights } = require('../services/flights');
 const { saveFlight, displaySavedFlights } = require('../models/flights');
 
@@ -11,7 +12,7 @@ router.get('/search', searchFlights, (req, res) => {
   })
 })
 
-router.post('/search/history', saveFlight, (req, res) => {
+router.post('/search/history', /*authenticate,*/ saveFlight, (req, res) => {
   res.redirect('./history');
 })
 

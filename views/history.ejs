@@ -11,7 +11,12 @@
   <link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet">
 </head>
 <body>
-  <a href="/">New Search</a>
+    <h1>Welcome! <%# user.username %></h1>
+    <form action="/auth?_method=DELETE" method="post">
+      <input type="submit" value="Logout">
+    </form>
+
+  <a href="/home">New Search</a>
   <h1>USER HISTORY</h1>
   <hr>
   <% for (let i = 0; i < savedFlights.length; i++) { %>
