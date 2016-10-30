@@ -1,7 +1,45 @@
+/*-----Apply to All Pages-----*/
 * {
   font-family: 'ABeeZee', sans-serif;
 }
+a {
+  text-decoration: none;
+}
 
+/*-----Index Page-----*/
+.flightsheader {
+  /*background-color: aqua;*/
+  text-align: center;
+  font-size: 50px;
+  margin: 50px;
+}
+
+.linkscontainer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.logsignlinks {
+  margin: 20px;
+  font-size: 30px;
+  background-color: lightgreen;
+  border: 1px solid black;
+  padding: 8px;
+}
+
+/*-----Login/Signup Pages-----*/
+.navlinks {
+  margin: 20px;
+  font-size: 20px;
+}
+
+.lisuncontainer {
+  text-align: center;
+  margin-top: 50px;
+}
+.subtitleheader {
+  margin-bottom: 40px;
+}
 
 /*-----Home Page-----*/
 .formcontainer {
@@ -129,6 +167,12 @@
 }
 
 /*-----History Page-----*/
+.globalContainer {
+  height: 400px;
+  /*width: 800px;*/
+  background-color: pink;
+  overflow-y: scroll;
+}
 .historyDisplayContainer {
   background-color: lightgreen;
   border: 1px solid black;
@@ -177,84 +221,4 @@
   width: 300px;
   display: none;
 }
-
-
-
-/*edit 0*/
-.editLabel0 {
-/*  color: red;
-  display: none;*/
-}
-.reminderBox0 {
-/*  height: 50px;
-  width: 300px;
-  display: none;*/
-}
-.updateButton0 {
-/*  background-color: yellow;
-  display: none;*/
-}
-/*edit 1*/
-/*
-.editLabel1 {
-  color: red;
-  display: none;
-}
-.reminderBox1 {
-  height: 50px;
-  width: 300px;
-  display: none;
-}
-.updateButton1 {
-  background-color: yellow;
-  display: none;
-}
-/*edit 2*/
-/*
-.editLabel2 {
-  color: red;
-  display: none;
-}
-.reminderBox2 {
-  height: 50px;
-  width: 300px;
-  display: none;
-}
-.updateButton2 {
-  background-color: yellow;
-  display: none;
-}
-*/
-/*edit 3*/
-/*
-.editLabel3 {
-  color: red;
-  display: none;
-}
-.reminderBox3 {
-  height: 50px;
-  width: 300px;
-  display: none;
-}
-.updateButton3 {
-  background-color: yellow;
-  display: none;
-}
-*/
-/*edit 4*/
-/*
-.editLabel4 {
-  color: red;
-  display: none;
-}
-.reminderBox4 {
-  height: 50px;
-  width: 300px;
-  display: none;
-}
-.updateButton4 {
-  background-color: yellow;
-  display: none;
-}
-*/
 

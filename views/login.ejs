@@ -11,15 +11,18 @@
   <link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <a href="/">Back to Index</a>
+  <nav class="navlinks">
+    <a href="/">To Index</a>
   </nav>
-  <h1>FLIGHTS ON A BUDGET</h1>
-  <h2>LOGIN</h2>
-    <form class="loginform" action="/auth" method="POST">
-      <input type="text" name="user[username]" value="" placeholder="Enter username">
-      <input type="password" name="user[password]" value="" placeholder="Enter password">
-      <input type="submit" name="name" value="Log in">
-    </form>
+  <h1 class="flightsheader">FLIGHT FINDER</h1>
+  <hr>
+  <div class="lisuncontainer">
+    <h2 class="subtitleheader">LOGIN</h2>
+      <form class="loginform" action="/auth" method="POST">
+        <input type="text" name="user[username]" value="" placeholder="Enter username">
+        <input type="password" name="user[password]" value="" placeholder="Enter password">
+        <input type="submit" name="name" value="Log in">
+      </form>
+  </div>
 </body>
 </html>
