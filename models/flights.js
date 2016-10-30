@@ -1,6 +1,6 @@
 // const { MongoClient } = require('mongodb');
 const { ObjectID } = require('mongodb');
-const { getDB }    = require('../lib/dbConnect');
+const { getDB }    = require('../lib/dbConnect.js');
 
 // const dbConnection = 'mongodb://localhost:27017/flight_search';
 
@@ -46,8 +46,9 @@ function displaySavedFlights(req, res, next) {
       // console.log(saveddata);
       res.savedflights = saveddata;
       db.close();
-      return next();
+      next();
     });
+    // console.log('session user id is ', req.session.userId);
     return false;
   });
   return false;
@@ -59,15 +60,15 @@ function saveFlight(req, res, next) {
   // copying all of req.body into insertObj
   for(key in req.body) {
     insertObj[key] = req.body[key];
-    // console.log('this is key ', insertObj[key]);
+    console.log('this is insertObj[key] ', insertObj[key]);
   }
   // Adding userId to insertObj
   insertObj.trips.userId = req.session.userId;
-  console.log('user with key ', insertObj.trips.userId);
+  console.log('this is insertObj.trips.userId ', insertObj.trips.userId);
 
   // MongoClient.connect(dbConnection, (err, db) => {
   getDB().then((db) => {
-    if (err) return next(err);
+    // if (err) return next(err);
     // console.log(insertObj.trips);
     db.collection('trips')
       // .insert(req.body.trips, (inErr, flightsaved) => {
@@ -76,7 +77,7 @@ function saveFlight(req, res, next) {
 
         res.saved = flightsaved;
         db.close();
-        return next();
+        next();
       });
       return false;
   });

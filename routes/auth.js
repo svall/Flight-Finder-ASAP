@@ -11,7 +11,7 @@ const { logIn } = require('../lib/auth');
  */
 
 router.post('/auth', logIn, (req, res) => {
-  console.log('logged in');
+  // console.log('logged in');
   res.redirect('/home');
 })
 

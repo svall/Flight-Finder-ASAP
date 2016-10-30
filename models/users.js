@@ -27,12 +27,13 @@ function createUser(req, res, next) {
 }
 
 function getUserById(id) {
-  return getDB().then((db) => {
+  return getDB()
+  .then((db) => {
     const promise = new Promise((resolve, reject) => {
       db.collection('users')
         .findOne({ _id: ObjectID(id) }, (findError, user) => {
           if (findError) reject(findError);
-          console.log('this is getuserby id ',user);
+          // console.log('this is getuserby id ',user);
           db.close();
           resolve(user);
         });
@@ -47,7 +48,7 @@ function getUserByUsername(username) {
       db.collection('users')
         .findOne({ username }, (findError, user) => {
           if (findError) reject(findError);
-          console.log('this is getuserby username ',user);
+          // console.log('this is getuserby username ',user);
           db.close();
           resolve(user);
         });

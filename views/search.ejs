@@ -27,7 +27,7 @@
     <div class="flightDisplayContainer">
       <% for (let i = 0; i < 5; i++) { %>
         <div class="selectedBox" id="selectedBox<%= i %>">
-          <form class="saveFlight" action="/search/history" method="POST">
+          <form class="saveFlight" action="/history" method="POST">
             <p class="selectedFlight" id="selectedFlight<%= i %>">Destination: <%= flights[i].destination %><br>
             Departure: <%= flights[i].departure_date %><br>
             Return: <%= flights[i].return_date %><br>

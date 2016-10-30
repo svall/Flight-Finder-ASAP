@@ -23,7 +23,7 @@ router.get('/home', authenticate, (req, res) => {
   res.render('./home', {
     user: res.user
   })
-    console.log('this is the user in route ', res.user);
+    // console.log('this is the user in route ', res.user);
 })
 
 router.get('/search', authenticate, searchFlights, (req, res) => {
@@ -38,7 +38,7 @@ router.get('/search', authenticate, searchFlights, (req, res) => {
 
 
 
-router.post('/search/history', authenticate, saveFlight, (req, res) => {
+router.post('/history', authenticate, saveFlight, (req, res) => {
   res.redirect('./history');
 })
 
