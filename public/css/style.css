@@ -2,6 +2,14 @@
 * {
   font-family: 'Economica', sans-serif;
 }
+
+body {
+  background-image: url('http://gotyouranswer.org/wp-content/uploads/2014/05/gray_world_map_parchment_north_asia_europe_big_hd-wallpaper-567943.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: grey;
+}
+
 a {
   text-decoration: none;
 }
@@ -14,15 +22,33 @@ a {
   margin: 25px;
 }
 
+.indehtitle {
+  font-size: 90px;
+}
+
+.firstprompt {
+  font-size: 40px;
+}
+
+.intro {
+  font-size: 30px;
+  padding: 20px 40px;
+}
+
 .linkscontainer {
   text-align: center;
   margin-top: 45px;
+  background-color: white;
+  opacity: 0.6;
+  z-index: 0.5;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .logsignlinks {
   margin: 20px;
   font-size: 30px;
-  background-color: lightgreen;
+  background-color: lightgrey;
   border: 1px solid black;
   padding: 8px;
 }
@@ -34,7 +60,7 @@ a {
 
 /*-----Login/Signup Pages-----*/
 .links {
-  font-size: 20px;
+  font-size: 25px;
   background-color: lightgrey;
   border: 1px solid black;
   padding: 8px;
@@ -51,14 +77,45 @@ a {
 }
 .subtitleheader {
   margin-bottom: 40px;
+  font-size: 35px;
   text-decoration: underline;
+}
+
+.loginform {
+  /*background-color: lightgreen;*/
+}
+
+.logsiginputs {
+  /*background-color: lightgrey;*/
+  font-family: 'Economica', sans-serif;
+  border: 1px solid black;
+  height: 30px;
+  width: 150px;
+  padding: 8px;
+  font-size: 23px;
+  top: 5px;
+}
+
+.logsiginbtn {
+  font-family: 'Economica', sans-serif;
+  font-size: 23px;
+  background-color: lightgrey;
+  border: 1px solid black;
+  padding: 8px;
 }
 
 /*-----Home Page-----*/
 .logoutButton {
   float: right;
+  margin-top: -8px;
+  font-family: 'Economica', sans-serif;
+  font-size: 20px;
+  background-color: lightgrey;
+  border: 1px solid black;
+  padding: 8px;
 }
-.globalContainer {
+
+.homeGlobalContainer {
   margin: 25px;
 }
 
@@ -67,24 +124,31 @@ a {
   padding-top: 10px;
   text-align: center;
 }
-/*.homeh2 {
-  text-align: center;
-  text-decoration: underline;
-  font-size: 30px;
-}*/
+
 .homelabel {
   font-size: 28px;
 }
+
 .homeinputs {
-  font-size: 17px;
   margin: 5px 0 25px 0;
+  font-family: 'Economica', sans-serif;
+  background-color: lightgrey;
+  border: 1px solid black;
+  padding: 8px;
 }
 
+.homeinputsbtn {
+  font-size: 25px;
+}
+
+.detailBoxes {
+  background-color: white;
+  font-size: 20px;
+}
 
 /*-----Search Results Page-----*/
 #flightBoard {
   background-color: lightgreen;
-  /*width: 800px;*/
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -96,14 +160,18 @@ a {
   width: 400px;
 }
 
+.savedSummary {
+  font-size: 40px;
+  text-decoration: underline;
+}
+
 .flightBox {
   border: 1px solid black;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /*margin: auto;*/
-  /*text-align: center;*/
 }
+
 .globalContainersearch {
   margin: 25px;
 }
@@ -117,8 +185,8 @@ a {
 }
 
 .buttonArea {
-  display: inline-block;
   /*background-color: red;*/
+  display: inline-block;
   margin: auto;
 }
 
@@ -128,9 +196,10 @@ a {
 }
 
 .displayInfoButton {
-  font-size: 15px;
-  height: 25px;
-  /*margin: auto;*/
+  font-size: 20px;
+  font-family: 'Economica', sans-serif;
+  background-color: lightgrey;
+  border: 1px solid black;
 }
 
 .flightDisplayContainer {
@@ -140,96 +209,52 @@ a {
   float: top;
   width: 500px;
 }
-/*flight0*/
+
 .selectedFlight {
+  /*background-color: green;*/
+  margin-left: 20px;
   display: none;
   position: absolute;
-  /*background-color: green;*/
   font-size: 25px;
 }
 .saveButton {
   display: none;
   position: absolute;
-  right: 50px;
+  top: 340px;
+  right: 100px;
+  font-family: 'Economica', sans-serif;
+  font-size: 20px;
+  background-color: lightgrey;
+  border: 1px solid black;
+  padding: 8px;
 }
 
-#reminderboxes {
-  font-size: 15px;
-  /*height: 70px;*/
-  /*width: 100px;*/
+.reminderboxes {
+  /*background-color: lightgrey;*/
+  font-size: 20px;
+  height: 40px;
+  width: 300px;
+  font-family: 'Economica', sans-serif;
+  border: 1px solid black;
+  padding: 8px;
 }
-
-#selectedFlight0 {
-  /*background-color: yellow;*/
-/*  display: none;
-  position: absolute;*/
-}
-#saveButton0 {
-/*  display: none;
-  position: absolute;
-  right: 50px;*/
-}
-/*flight1*/
-/*#selectedFlight1 {*/
-  /*background-color: yellow;*/
-/*  display: none;
-  position: absolute;
-}
-#saveButton1 {
-  display: none;
-  position: absolute;
-  right: 50px;
-}*/
-/*flight2*/
-/*#selectedFlight2 {*/
-  /*background-color: yellow;*/
-/*  display: none;
-  position: absolute;
-}
-#saveButton2 {
-  display: none;
-  position: absolute;
-  right: 50px;
-}*/
-/*flight3*/
-/*#selectedFlight3 {*/
-  /*background-color: yellow;*/
-/*  display: none;
-  position: absolute;
-}
-#saveButton3 {
-  display: none;
-  position: absolute;
-  right: 50px;
-}*/
-/*flight4*/
-/*#selectedFlight4 {*/
-  /*background-color: yellow;*/
-/*  display: none;
-  position: absolute;
-}
-#saveButton4 {
-  display: none;
-  position: absolute;
-  right: 50px;
-}*/
 
 /*-----History Page-----*/
 .savedSummary {
   text-align: center;
   margin: 25px;
 }
+
 .globalContainer {
-  height: 400px;
-  /*width: 800px;*/
   /*background-color: pink;*/
+  height: 400px;
   overflow-y: scroll;
 }
+
 .historyDisplayContainer {
   /*background-color: lightgreen;*/
   border-top: 1px solid black;
   border-bottom: : 1px solid black;
-  /*height: 400px;*/
   width: 700px;
   display: flex;
   flex-wrap: wrap;
@@ -240,22 +265,26 @@ a {
   /*background-color: orange;*/
   width: 230px;
   display: inline-block;
-  font-size: 20px;
+  font-size: 23px;
   padding-right: 10px;
   margin-left: 10px;
-  /*margin: 0 5px;*/
 }
+
 .eddelbuttons {
-  /*width: 10px;*/
-  padding-top: 22px;
   /*background-color: green;*/
+  padding-top: 22px;
   text-align: center;
 }
 
 /*edit & update elements*/
 .allDeleteButtons {
-  font-size: 13px;
+  font-family: 'Economica', sans-serif;
+  font-size: 20px;
+  background-color: lightgrey;
+  border: 1px solid black;
+  padding: 8px;
 }
+
 .allUpdateBoxes {
   /*background-color: green;*/
   width: 280px;
@@ -263,28 +292,39 @@ a {
   margin-top: 20px;
   padding-left: 30px;
 }
+
 .allEditButtons {
-  font-size: 13px;
-  height: 20px;
+  width: 64px;
   margin-top: 5px;
+  font-family: 'Economica', sans-serif;
+  font-size: 20px;
+  background-color: lightgrey;
+  border: 1px solid black;
+  padding: 8px;
 }
 .allUpdateButtons {
   /*background-color: yellow;*/
   display: none;
-  font-size: 13px;
+  font-size: 20px;
+  font-family: 'Economica', sans-serif;
+  background-color: lightgrey;
+  border: 1px solid black;
+  padding: 8px;
 }
 .allEditLabels {
   /*color: red;*/
   display: none;
-  font-size: 20px;
+  font-size: 25px;
 }
-.allUpdateBoxes {
 
-}
 .allReminderBoxes {
+  /*background-color: lightgrey;*/
   height: 50px;
   width: 250px;
   display: none;
-  font-size: 15px;
+  font-size: 20px;
+  font-family: 'Economica', sans-serif;
+  border: 1px solid black;
+  padding: 8px;
 }
 

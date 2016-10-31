@@ -23,7 +23,7 @@
   <hr>
   <div class="globalContainersearch">
     <h1 class="savedSummary">Search Results for <%= user.username %>:</h1>
-    <h2>Flights leaving from: <%= origin %></h2>
+    <h1>Flights leaving from <%= origin %></h1>
     <div id="flightBoard">
       <div class="flightSearchContainer">
         <% for (let i = 0; i < 5; i++) { %>
@@ -42,7 +42,7 @@
               <p class="selectedFlight" id="selectedFlight<%= i %>">Destination: <%= flights[i].destination %><br>
               Departure: <%= flights[i].departure_date %><br>
               Return: <%= flights[i].return_date %><br>
-              Price: $<%= price[i] %><br>
+              Price: $<%= price[i] %><br><br>
               <label> Reminders/Comments:<br>
                 <input type="text" id="reminderBox" class="reminderboxes" name="trips[reminders]">
               </label></p>

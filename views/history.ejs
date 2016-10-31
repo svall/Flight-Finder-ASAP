@@ -21,23 +21,23 @@
   </form>
   <h1 class="flightsheader">FLIGHT FINDER</h1>
   <hr>
-  <h1 class="savedSummary">Saved flights: %></h1>
+  <h1 class="savedSummary">Total Flights Saved - <%= savedFlights.length %></h1>
   <div class="globalContainer">
   <% for (let i = 0; i < savedFlights.length; i++) { %>
     <div class="historyDisplayContainer">
       <div class="userInfoHistory">
-        <p>Origin: <%= savedFlights[i].origin %><br>
-        Destination: <%= savedFlights[i].destination %><br>
-        Departure: <%= savedFlights[i].departure_date %><br>
-        Return: <%= savedFlights[i].return_date %><br>
-        Price: $<%= savedFlights[i].price %><br>
-        Reminders: <%= savedFlights[i].reminders %></p>
+        <p><span style="font-weight: bold; color: blue;">Origin:</span> <%= savedFlights[i].origin %><br>
+        <span style="font-weight: bold; color: blue;">Destination:</span> <%= savedFlights[i].destination %><br>
+        <span style="font-weight: bold; color: blue;">Departure:</span> <%= savedFlights[i].departure_date %><br>
+        <span style="font-weight: bold; color: blue;">Return:</span> <%= savedFlights[i].return_date %><br>
+        <span style="font-weight: bold; color: blue;">Price:</span> $<%= savedFlights[i].price %><br>
+        <span style="font-weight: bold; color: blue;">Reminders:</span> <%= savedFlights[i].reminders %></p>
       </div>
       <div class="eddelbuttons">
         <form class="delete-flight" action="/history/<%= savedFlights[i]._id %>?_method=DELETE" method="POST">
-          <input type="submit" class="allDeleteButtons" value="DELETE TRIP">
+          <input type="submit" class="allDeleteButtons" value="DELETE">
         </form>
-        <input type="submit" class="editButton<%= i %> allEditButtons" value="EDIT REMINDER">
+        <input type="submit" class="editButton<%= i %> allEditButtons" value="EDIT">
       <!-- </div> -->
       </div>
       <form class="editHistory" action="/history/<%= savedFlights[i]._id %>?_method=PUT" method="POST">

@@ -4,35 +4,6 @@ const { getDB }    = require('../lib/dbConnect.js');
 
 // const dbConnection = 'mongodb://localhost:27017/flight_search';
 
-// function saveFlight(req, res, next) {
-//   // creating an empty object for the insertObj
-//   const insertObj = {};
-//   // copying all of req.body into insertObj
-//   for(key in req.body) {
-//     insertObj[key] = req.body[key];
-//     // console.log('this is key ', insertObj[key]);
-//   }
-//   // Adding userId to insertObj
-//   insertObj.trips.userId = req.session.userId;
-
-//   // MongoClient.connect(dbConnection, (err, db) => {
-//   getDB().then((db) => {
-//     if (err) return next(err);
-//     // console.log(insertObj.trips);
-//     db.collection('trips')
-//       // .insert(req.body.trips, (inErr, flightsaved) => {
-//       .insert(insertObj.trips, (inErr, flightsaved) => {
-//         if (inErr) return next(inErr);
-
-//         res.saved = flightsaved;
-//         db.close();
-//         return next();
-//       });
-//       return false;
-//   });
-//   return false;
-// }
-
 function displaySavedFlights(req, res, next) {
   // MongoClient.connect(dbConnection, (err, db) => {
   getDB().then((db) => {
@@ -45,6 +16,7 @@ function displaySavedFlights(req, res, next) {
       if (toArrayErr) return next(toArrayErr);
       // console.log(saveddata);
       res.savedflights = saveddata;
+      console.log('this is the # of saved ', res.savedflights.length);
       db.close();
       next();
     });

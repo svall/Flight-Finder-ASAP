@@ -25,24 +25,24 @@
   <h1 class="flightsheader">FLIGHT FINDER</h1>
   <hr>
     <!-- <h1>Welcome!</h1> -->
-    <div class="globalContainer">
+    <div class="homeGlobalContainer">
       <h1 class="searchDescription">Hi, <%= user.username %>! Enter the following details to start your new search:</h1>
       <!-- <h2 class="homeh2">ENTER SEARCH DETAILS</h2> -->
       <div class="formcontainer">
         <form action="/search" method="get">
           <label class="homelabel">What is your closest airport?<br>
-            <input type="text" class="homeinputs" name="origin" placeholder="MIA, NYC">
+            <input type="text" class="homeinputs detailBoxes" name="origin" placeholder="MIA, NYC">
           </label><br>
           <label class="homelabel">When do you want to leave?<br>
-            <input type="text" class="homeinputs" name="departure_date" placeholder="YYYY-MM-DD">
+            <input type="text" class="homeinputs detailBoxes" name="departure_date" placeholder="YYYY-MM-DD">
           </label><br>
           <label class="homelabel">How many days do you have available?<br>
-            <input type="text" class="homeinputs" name="duration" placeholder="ex. 3">
+            <input type="text" class="homeinputs detailBoxes" name="duration" placeholder="ex. 3">
           </label><br>
           <label class="homelabel">What is your budget?<br>
-            <input type="text" class="homeinputs" name="max_price" placeholder="ex. 200">
+            <input type="text" class="homeinputs detailBoxes" name="max_price" placeholder="ex. 200">
           </label><br>
-          <input type="submit" class="homeinputs" value="Search">
+          <input type="submit" class="homeinputs homeinputsbtn" value="Search">
         </form>
       </div>
     </div>
