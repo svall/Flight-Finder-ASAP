@@ -22,8 +22,8 @@
   <h1 class="flightsheader">FLIGHT FINDER</h1>
   <hr>
   <div class="globalContainersearch">
-    <h1 class="savedSummary">Search Results for <%= user.username %>:</h1>
-    <h1>Flights leaving from <%= origin %></h1>
+    <h1 class="savedSummary">Search Results for <span style="color: blue;"><%= user.username %></span>:</h1>
+    <h1>Flights with origin <%= origin %></h1>
     <div id="flightBoard">
       <div class="flightSearchContainer">
         <% for (let i = 0; i < 5; i++) { %>
@@ -39,10 +39,10 @@
         <% for (let i = 0; i < 5; i++) { %>
           <div class="selectedBox" id="selectedBox<%= i %>">
             <form class="saveFlight" action="/history" method="POST">
-              <p class="selectedFlight" id="selectedFlight<%= i %>">Destination: <%= flights[i].destination %><br>
-              Departure: <%= flights[i].departure_date %><br>
-              Return: <%= flights[i].return_date %><br>
-              Price: $<%= price[i] %><br><br>
+              <p class="selectedFlight" id="selectedFlight<%= i %>"><span style="font-weight: bold; color: blue;">Destination:</span> <%= flights[i].destination %><br>
+              <span style="font-weight: bold; color: blue;">Departure: </span><%= flights[i].departure_date %><br>
+              <span style="font-weight: bold; color: blue;">Return: </span><%= flights[i].return_date %><br>
+              <span style="font-weight: bold; color: blue;">Price: </span>$<%= price[i] %><br><br>
               <label> Reminders/Comments:<br>
                 <input type="text" id="reminderBox" class="reminderboxes" name="trips[reminders]">
               </label></p>

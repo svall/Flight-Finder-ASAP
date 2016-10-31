@@ -4,14 +4,7 @@ console.log('JS connected');
 $(document).ready(() => {
   console.log("JQuery ok");
 
-  // $('.homeinputsbtn').click(function(event) {
-  //     if (data.length === 0) {
-  //       alert('No results matching that search'),
-  //       console.log('no matching resutls');
-  //     }
-  //   }
-  // });
-
+  // event listeners on the "See Details" button to display the complete info of the flight selected
   $('#displayInfoButton0').click(function(event) {
     // console.log('0');
     $('#selectedFlight0').toggle();
@@ -38,18 +31,7 @@ $(document).ready(() => {
     $('#saveButton4').toggle();
   });
 
-// for (let i = 0 ; i < 5 ; i++) {
-//   $('#displayInfoButton' + i).click(function(event) {
-//     $('#selectedFlight' + i).toggle();
-//     $('#saveButton' + i).toggle();
-//   })
-// }
-
-  // for (let i = 0 ; i < 5 ; i++) {
-  //   $('#editButton' + toString(i)).click(function(event) {
-  //     $('#reminderBox' + toString(i)).toggle();
-  //   });
-  // }
+  // event listener on the "Edit" button to display the edit textbox and the update button to save it
   $('.editButton0').click(function(event) {
     $('.updateButton0').toggle();
     $('.reminderBox0').toggle();
@@ -74,6 +56,18 @@ $(document).ready(() => {
     $('.updateButton4').toggle();
     $('.reminderBox4').toggle();
     $('.editLabel4').toggle();
+  // for (let i = 0 ; i < 5 ; i++) {
+  //   $('#displayInfoButton' + i).click(function(event) {
+  //     $('#selectedFlight' + i).toggle();
+  //     $('#saveButton' + i).toggle();
+  //   })
+  // }
+
+  // for (let i = 0 ; i < 5 ; i++) {
+  //   $('#editButton' + toString(i)).click(function(event) {
+  //     $('#reminderBox' + toString(i)).toggle();
+  //   });
+  // }
   });
 
 

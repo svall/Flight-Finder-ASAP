@@ -1,9 +1,11 @@
+// User template code was provided by instructors at General Assembly (https://git.generalassemb.ly/wdi-nyc-60/user_auth_itunes)
 // const { MongoClient } = require('mongodb');
 const { ObjectID } = require('mongodb');
 const { getDB }    = require('../lib/dbConnect.js');
-
 // const dbConnection = 'mongodb://localhost:27017/flight_search';
 
+// displaySavedFlights() displays any flights previously saved by this user
+// Code referenced from https://git.generalassemb.ly/wdi-nyc-60/tom-cruise-movie-db/tree/rafa-solution
 function displaySavedFlights(req, res, next) {
   // MongoClient.connect(dbConnection, (err, db) => {
   getDB().then((db) => {
@@ -11,7 +13,7 @@ function displaySavedFlights(req, res, next) {
 
   db.collection('trips')
     // .find({})
-    .find({ userId: { $eq: req.session.userId } }) //this is how we find the favorites for the user i want
+    .find({ userId: { $eq: req.session.userId } })
     .toArray((toArrayErr, saveddata) => {
       if (toArrayErr) return next(toArrayErr);
       // console.log(saveddata);
@@ -26,6 +28,8 @@ function displaySavedFlights(req, res, next) {
   return false;
 }
 
+// saveFlight() posts the flight information to Mongodb with the current user's id
+// Code referenced from https://git.generalassemb.ly/wdi-nyc-60/tom-cruise-movie-db/tree/rafa-solution
 function saveFlight(req, res, next) {
   // creating an empty object for the insertObj
   const insertObj = {};
@@ -56,6 +60,8 @@ function saveFlight(req, res, next) {
   return false;
 }
 
+// deleteSavedFlight() deletes from the trip collection in Mongodb the current document
+// Code referenced from https://git.generalassemb.ly/wdi-nyc-60/tom-cruise-movie-db/tree/rafa-solution
 function deleteSavedFlight(req, res, next) {
   // MongoClient.connect(dbConnection, (err, db) => {
   getDB().then((db) => {
@@ -74,6 +80,8 @@ function deleteSavedFlight(req, res, next) {
   return false;
 }
 
+// editSavedFlights() replaces the current comment in Mongobd for the new input text
+// Code referenced from https://git.generalassemb.ly/wdi-nyc-60/tom-cruise-movie-db/tree/rafa-solution
 function editSavedFlights (req, res, next) {
   // MongoClient.connect(dbConnection, (err, db) => {
   getDB().then((db) => {

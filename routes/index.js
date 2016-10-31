@@ -1,3 +1,4 @@
+// User template code was provided by instructors at General Assembly (https://git.generalassemb.ly/wdi-nyc-60/user_auth_itunes)
 const router = require('express').Router();
 
 router.get('/', (req, res) => {

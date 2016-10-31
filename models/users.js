@@ -7,6 +7,8 @@ const bcrypt       = require('bcryptjs');
 
 const SALTROUNDS = 10;
 
+// createUser() creates new user with username and passwor, inserts the data to users collection in flight_search db in Mongodb
+// Code referenced from https://git.generalassemb.ly/wdi-nyc-60/user_auth_itunes
 function createUser(req, res, next) {
   const userObject = {
     username: req.body.user.username,
@@ -26,6 +28,8 @@ function createUser(req, res, next) {
   });
 }
 
+// getUserById() finds the user in Mongodb based on the unique _id given by Mongo when the user registered
+// Code referenced from https://git.generalassemb.ly/wdi-nyc-60/user_auth_itunes
 function getUserById(id) {
   return getDB()
   .then((db) => {
@@ -42,6 +46,8 @@ function getUserById(id) {
   });
 }
 
+// getUserByUsername() finds user in Mongodb based on the username the user entered when signing up
+// Code referenced from https://git.generalassemb.ly/wdi-nyc-60/user_auth_itunes
 function getUserByUsername(username) {
   return getDB().then((db) => {
     const promise = new Promise((resolve, reject) => {

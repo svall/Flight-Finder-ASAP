@@ -26,9 +26,9 @@
   <hr>
     <!-- <h1>Welcome!</h1> -->
     <div class="homeGlobalContainer">
-      <h1 class="searchDescription">Hi, <%= user.username %>! Enter the following details to start your new search:</h1>
       <!-- <h2 class="homeh2">ENTER SEARCH DETAILS</h2> -->
       <div class="formcontainer">
+      <h1 class="searchDescription">Hi, <span style="font-weight: bold; color: blue;"><%= user.username %></span>! Enter the following details to start your new search:</h1>
         <form action="/search" method="get">
           <label class="homelabel">What is your closest airport? (*use <a href="https://en.wikipedia.org/wiki/International_Air_Transport_Association_airport_code">IATA City Codes</a>)<br>
             <input type="text" class="homeinputs detailBoxes" name="origin" placeholder="MIA, NYC" required>

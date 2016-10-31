@@ -1,3 +1,4 @@
+// User template code was provided by instructors at General Assembly (https://git.generalassemb.ly/wdi-nyc-60/user_auth_itunes)
 /* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
 
 const router = require('express').Router();
@@ -37,7 +38,6 @@ router.get('/search', authenticate, searchFlights, (req, res) => {
 })
 
 
-
 router.post('/history', authenticate, saveFlight, (req, res) => {
   res.redirect('./history');
 })
@@ -50,9 +50,11 @@ router.get('/history', authenticate, displaySavedFlights, (req, res) => {
   })
 })
 
+
 router.put('/history/:id', editSavedFlights, (req, res) => {
   res.redirect('/history')
 })
+
 
 router.delete('/history/:id', deleteSavedFlight, (req, res) => {
   res.redirect('/history')

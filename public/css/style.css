@@ -18,7 +18,8 @@ a {
 .flightsheader {
   /*background-color: aqua;*/
   text-align: center;
-  font-size: 55px;
+  font-size: 65px;
+  font-weight: bold;
   margin: 25px;
 }
 
@@ -60,6 +61,10 @@ a {
   text-align: center;
 }
 
+.navbtns {
+  margin-bottom: 20px;
+}
+
 /*-----Login/Signup Pages-----*/
 .links {
   font-size: 25px;
@@ -77,10 +82,16 @@ a {
   text-align: center;
   margin-top: 50px;
 }
+
+.logsighead {
+  color: white;
+  text-decoration: none;
+}
+
 .subtitleheader {
   margin-bottom: 40px;
   font-size: 35px;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 
 .loginform {
@@ -111,7 +122,7 @@ a {
   float: right;
   margin-top: -8px;
   font-family: 'Economica', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   background-color: lightgrey;
   border: 1px solid black;
   padding: 8px;
@@ -119,12 +130,16 @@ a {
 
 .homeGlobalContainer {
   margin: 25px;
+  padding-top: 10px;
 }
 
 .formcontainer {
-  background-color: #b1fcb1;
+  margin: auto;
   padding-top: 10px;
+  width: 700px;
   text-align: center;
+  background-color: white;
+  opacity: 0.8;
 }
 
 .homelabel {
@@ -150,21 +165,21 @@ a {
 
 /*-----Search Results Page-----*/
 #flightBoard {
-  background-color: lightgreen;
+  /*background-color: lightgreen;*/
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
 .flightSearchContainer {
-  background-color: lightblue;
+  /*background-color: lightblue;*/
   display: inline-block;
   width: 400px;
 }
 
 .savedSummary {
   font-size: 40px;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 
 .flightBox {
@@ -176,6 +191,9 @@ a {
 
 .globalContainersearch {
   margin: 25px;
+  background-color: white;
+  opacity: 0.7;
+  padding: 10px 25px 25px 25px;
 }
 
 .eachDest {
@@ -193,7 +211,7 @@ a {
 }
 
 .seedetailsbtn {
-  background-color: blue;
+  /*background-color: blue;*/
   margin: auto;
 }
 
@@ -232,7 +250,7 @@ a {
 }
 
 .reminderboxes {
-  /*background-color: lightgrey;*/
+  background-color: lightgrey;
   font-size: 20px;
   height: 40px;
   width: 300px;
@@ -244,13 +262,20 @@ a {
 /*-----History Page-----*/
 .savedSummary {
   text-align: center;
-  margin: 25px;
+  margin: 20px;
 }
 
 .globalContainer {
   /*background-color: pink;*/
   height: 400px;
   overflow-y: scroll;
+}
+
+.gralContainer {
+  margin: 25px;
+  background-color: white;
+  opacity: 0.7;
+  padding: 10px 25px 25px 25px;
 }
 
 .historyDisplayContainer {
