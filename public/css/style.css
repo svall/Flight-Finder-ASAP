@@ -1,6 +1,6 @@
 /*-----Apply to All Pages-----*/
 * {
-  font-family: 'ABeeZee', sans-serif;
+  font-family: 'Economica', sans-serif;
 }
 a {
   text-decoration: none;
@@ -10,13 +10,13 @@ a {
 .flightsheader {
   /*background-color: aqua;*/
   text-align: center;
-  font-size: 50px;
-  margin: 50px;
+  font-size: 55px;
+  margin: 25px;
 }
 
 .linkscontainer {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 45px;
 }
 
 .logsignlinks {
@@ -27,7 +27,19 @@ a {
   padding: 8px;
 }
 
+.searchDescription {
+  font-size: 35px;
+  text-align: center;
+}
+
 /*-----Login/Signup Pages-----*/
+.links {
+  font-size: 20px;
+  background-color: lightgrey;
+  border: 1px solid black;
+  padding: 8px;
+}
+
 .navlinks {
   margin: 20px;
   font-size: 20px;
@@ -39,25 +51,32 @@ a {
 }
 .subtitleheader {
   margin-bottom: 40px;
+  text-decoration: underline;
 }
 
 /*-----Home Page-----*/
+.logoutButton {
+  float: right;
+}
+.globalContainer {
+  margin: 25px;
+}
+
 .formcontainer {
   background-color: #b1fcb1;
   padding-top: 10px;
   text-align: center;
 }
-.homeh2 {
+/*.homeh2 {
   text-align: center;
   text-decoration: underline;
-  font-size: 25px;
-}
-.homelabel {
   font-size: 30px;
-
+}*/
+.homelabel {
+  font-size: 28px;
 }
 .homeinputs {
-  font-size: 20px;
+  font-size: 17px;
   margin: 5px 0 25px 0;
 }
 
@@ -85,10 +104,14 @@ a {
   /*margin: auto;*/
   /*text-align: center;*/
 }
+.globalContainersearch {
+  margin: 25px;
+}
 
 .eachDest {
   /*background-color: lightyellow;*/
   display: inline-block;
+  font-size: 25px;
   width: 50%;
   margin-left: 10px;
 }
@@ -99,8 +122,15 @@ a {
   margin: auto;
 }
 
+.seedetailsbtn {
+  background-color: blue;
+  margin: auto;
+}
+
 .displayInfoButton {
-  font-size: 30px;
+  font-size: 15px;
+  height: 25px;
+  /*margin: auto;*/
 }
 
 .flightDisplayContainer {
@@ -111,71 +141,94 @@ a {
   width: 500px;
 }
 /*flight0*/
-#selectedFlight0 {
-  /*background-color: yellow;*/
+.selectedFlight {
   display: none;
   position: absolute;
+  /*background-color: green;*/
+  font-size: 25px;
 }
-#saveButton0 {
+.saveButton {
   display: none;
   position: absolute;
   right: 50px;
 }
-/*flight1*/
-#selectedFlight1 {
+
+#reminderboxes {
+  font-size: 15px;
+  /*height: 70px;*/
+  /*width: 100px;*/
+}
+
+#selectedFlight0 {
   /*background-color: yellow;*/
-  display: none;
+/*  display: none;
+  position: absolute;*/
+}
+#saveButton0 {
+/*  display: none;
+  position: absolute;
+  right: 50px;*/
+}
+/*flight1*/
+/*#selectedFlight1 {*/
+  /*background-color: yellow;*/
+/*  display: none;
   position: absolute;
 }
 #saveButton1 {
   display: none;
   position: absolute;
   right: 50px;
-}
+}*/
 /*flight2*/
-#selectedFlight2 {
+/*#selectedFlight2 {*/
   /*background-color: yellow;*/
-  display: none;
+/*  display: none;
   position: absolute;
 }
 #saveButton2 {
   display: none;
   position: absolute;
   right: 50px;
-}
+}*/
 /*flight3*/
-#selectedFlight3 {
+/*#selectedFlight3 {*/
   /*background-color: yellow;*/
-  display: none;
+/*  display: none;
   position: absolute;
 }
 #saveButton3 {
   display: none;
   position: absolute;
   right: 50px;
-}
+}*/
 /*flight4*/
-#selectedFlight4 {
+/*#selectedFlight4 {*/
   /*background-color: yellow;*/
-  display: none;
+/*  display: none;
   position: absolute;
 }
 #saveButton4 {
   display: none;
   position: absolute;
   right: 50px;
-}
+}*/
 
 /*-----History Page-----*/
+.savedSummary {
+  text-align: center;
+  margin: 25px;
+}
 .globalContainer {
   height: 400px;
   /*width: 800px;*/
-  background-color: pink;
+  /*background-color: pink;*/
   overflow-y: scroll;
 }
 .historyDisplayContainer {
-  background-color: lightgreen;
-  border: 1px solid black;
+  /*background-color: lightgreen;*/
+  border-top: 1px solid black;
+  border-bottom: : 1px solid black;
   /*height: 400px;*/
   width: 700px;
   display: flex;
@@ -185,10 +238,18 @@ a {
 
 .userInfoHistory {
   /*background-color: orange;*/
-  width: 250px;
+  width: 230px;
   display: inline-block;
-  /*padding: 5px;*/
-  margin: 0 10px;
+  font-size: 20px;
+  padding-right: 10px;
+  margin-left: 10px;
+  /*margin: 0 5px;*/
+}
+.eddelbuttons {
+  /*width: 10px;*/
+  padding-top: 22px;
+  /*background-color: green;*/
+  text-align: center;
 }
 
 /*edit & update elements*/
@@ -197,11 +258,15 @@ a {
 }
 .allUpdateBoxes {
   /*background-color: green;*/
-  width: 310px;
+  width: 280px;
   margin: 10px;
+  margin-top: 20px;
+  padding-left: 30px;
 }
 .allEditButtons {
   font-size: 13px;
+  height: 20px;
+  margin-top: 5px;
 }
 .allUpdateButtons {
   /*background-color: yellow;*/
@@ -218,7 +283,8 @@ a {
 }
 .allReminderBoxes {
   height: 50px;
-  width: 300px;
+  width: 250px;
   display: none;
+  font-size: 15px;
 }
 
