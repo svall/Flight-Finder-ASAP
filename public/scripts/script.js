@@ -4,6 +4,14 @@ console.log('JS connected');
 $(document).ready(() => {
   console.log("JQuery ok");
 
+  // $('.homeinputsbtn').click(function(event) {
+  //     if (data.length === 0) {
+  //       alert('No results matching that search'),
+  //       console.log('no matching resutls');
+  //     }
+  //   }
+  // });
+
   $('#displayInfoButton0').click(function(event) {
     // console.log('0');
     $('#selectedFlight0').toggle();

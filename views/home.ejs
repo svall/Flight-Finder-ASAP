@@ -30,17 +30,17 @@
       <!-- <h2 class="homeh2">ENTER SEARCH DETAILS</h2> -->
       <div class="formcontainer">
         <form action="/search" method="get">
-          <label class="homelabel">What is your closest airport?<br>
-            <input type="text" class="homeinputs detailBoxes" name="origin" placeholder="MIA, NYC">
+          <label class="homelabel">What is your closest airport? (*use <a href="https://en.wikipedia.org/wiki/International_Air_Transport_Association_airport_code">IATA City Codes</a>)<br>
+            <input type="text" class="homeinputs detailBoxes" name="origin" placeholder="MIA, NYC" required>
           </label><br>
           <label class="homelabel">When do you want to leave?<br>
-            <input type="text" class="homeinputs detailBoxes" name="departure_date" placeholder="YYYY-MM-DD">
+            <input type="text" class="homeinputs detailBoxes" name="departure_date" placeholder="YYYY-MM-DD" required>
           </label><br>
           <label class="homelabel">How many days do you have available?<br>
-            <input type="text" class="homeinputs detailBoxes" name="duration" placeholder="ex. 3">
+            <input type="text" class="homeinputs detailBoxes" name="duration" placeholder="ex. 3" required>
           </label><br>
           <label class="homelabel">What is your budget?<br>
-            <input type="text" class="homeinputs detailBoxes" name="max_price" placeholder="ex. 200">
+            <input type="text" class="homeinputs detailBoxes" name="max_price" placeholder="ex. 200" required>
           </label><br>
           <input type="submit" class="homeinputs homeinputsbtn" value="Search">
         </form>
