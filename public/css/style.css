@@ -38,11 +38,13 @@ a {
 .linkscontainer {
   text-align: center;
   margin-top: 45px;
+  margin: 45px 60px;
   background-color: white;
   opacity: 0.6;
   z-index: 0.5;
-  margin-left: 40px;
-  margin-right: 40px;
+  /*margin-left: 60px;*/
+  /*margin-right: 60px;*/
+  padding: 10px;
 }
 
 .logsignlinks {

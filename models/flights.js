@@ -16,7 +16,7 @@ function displaySavedFlights(req, res, next) {
       if (toArrayErr) return next(toArrayErr);
       // console.log(saveddata);
       res.savedflights = saveddata;
-      console.log('this is the # of saved ', res.savedflights.length);
+      // console.log('this is the # of saved ', res.savedflights.length);
       db.close();
       next();
     });
@@ -32,11 +32,11 @@ function saveFlight(req, res, next) {
   // copying all of req.body into insertObj
   for(key in req.body) {
     insertObj[key] = req.body[key];
-    console.log('this is insertObj[key] ', insertObj[key]);
+    // console.log('this is insertObj[key] ', insertObj[key]);
   }
   // Adding userId to insertObj
   insertObj.trips.userId = req.session.userId;
-  console.log('this is insertObj.trips.userId ', insertObj.trips.userId);
+  // console.log('this is insertObj.trips.userId ', insertObj.trips.userId);
 
   // MongoClient.connect(dbConnection, (err, db) => {
   getDB().then((db) => {
