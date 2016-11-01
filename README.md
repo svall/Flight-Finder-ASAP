@@ -1,18 +1,18 @@
 //----Susana Isaza, 10.31.2016----//
 //----Flight-Finder-ASAP----//
 
-Links:
+## Links:
 
 Heroky: https://find-flights-asap.herokuapp.com/
 GitHub: https://github.com/svall/Flight-Mood
 
 
-Summary:
+## Summary:
 
 The app allows users to search for flights based on an origin city (entered in IATA code), departure date, nuber of days to leave, and budget. 
 
 
-App process:
+## App process:
 
 Before using the app, a user must create an account to access.
 Once a user has signed up creating a username and passowrd, they can proceed to log in.
@@ -24,7 +24,7 @@ When performing a search, five resuls will be provided in the search page displa
 In the history page, the user can look through any previous flights saved, as well as delete the trip, and edit the comment/reminder that was added when it was saved.
 
 
-Wireframes:
+## Wireframes:
 
 Index page:
 ![alt tag](./images/index.png)
@@ -42,7 +42,7 @@ User history - saved selected trips:
 ![alt tag](./images/history.png)
 
 
-Approach:
+## Approach:
 
 0. Select API and tested get requests.
 1. Set up MVC structure, created package.json with necessary dependencies.
@@ -57,7 +57,7 @@ Approach:
 10. Styled with CSS.
 
 
-Technologies Used:
+## Technologies Used:
 
 - API: https://sandbox.amadeus.com/travel-innovation-sandbox/apis/get/flights/inspiration-search
 - Database: Mongodb
@@ -67,7 +67,7 @@ Technologies Used:
 - CSS
 
 
-Attributions & Sources:
+## Attributions & Sources:
 
 1. Users and session structure provided by General Assembly instructors: https://git.generalassemb.ly/wdi-nyc-60/user_auth_itunes
 2. Edit & Delete documents in Mongo: https://git.generalassemb.ly/wdi-nyc-60/tom-cruise-movie-db/tree/rafa-solution
@@ -77,8 +77,8 @@ Attributions & Sources:
 6. Adding images to readme.md: http://stackoverflow.com/questions/10189356/how-to-add-screenshot-to-readmes-in-github-repository
 
 
-Constraints:
-1. API with the information needed (especially flight prices).
-2. Limiting the city searches to the IATA City Codes.
-3. Adding user sessions (structuring it according to my initial setup, landing in the search page instead ot the user history page).
+## Constraints:
+- API with the information needed (especially flight prices).
+- Limiting the city searches to the IATA City Codes.
+- Adding user sessions (structuring it according to my initial setup, landing in the search page instead ot the user history page).
 
