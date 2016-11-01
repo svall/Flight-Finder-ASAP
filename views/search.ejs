@@ -1,62 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>ASAP Flight</title>
-  <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js" charset="utf-8"></script>
-  <script src="/scripts/script.js" type="text/javascript"></script>
-  <link href="https://fonts.googleapis.com/css?family=Economica" rel="stylesheet">
-</head>
-<body>
-<form action="/auth?_method=DELETE" method="post">
-    <nav class="navlinks">
-      <a href="/home" class="links">New Search</a>
-      <input type="submit" class="logoutButton" value="Logout">
-    </nav>
-    <!-- <input type="submit" class="logoutButton" value="Logout"> -->
-    <!-- <h1 class="flightsheader">FLIGHT FINDER</h1> -->
-  </form>
-  <h1 class="flightsheader">FLIGHT FINDER</h1>
-  <hr>
-  <div class="globalContainersearch">
-    <h1 class="savedSummary">Search Results for <span style="color: blue;"><%= user.username %></span>:</h1>
-    <h1>Flights with origin <%= origin %></h1>
-    <div id="flightBoard">
-      <div class="flightSearchContainer">
-        <% for (let i = 0; i < 5; i++) { %>
-          <div class="flightBox">
-            <p class="eachDest">Destination: <%= flights[i].destination %></p>
-            <div class="seedetailsbtn">
-              <input type="submit" id="displayInfoButton<%= i %>" class="displayInfoButton" value="See Details">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ASAP Flight</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js" charset="utf-8"></script>
+    <script src="/scripts/script.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=Economica" rel="stylesheet">
+  </head>
+  <body>
+    <form action="/auth?_method=DELETE" method="post">
+      <nav class="navlinks">
+        <a href="/home" class="links">New Search</a>
+        <input type="submit" class="logoutButton" value="Logout">
+      </nav>
+    </form>
+    <h1 class="flightsheader">FLIGHT FINDER</h1>
+    <hr>
+    <div class="globalContainersearch">
+      <h1 class="savedSummary">Search Results for <span style="color: blue;"><%= user.username %></span>:</h1>
+      <h1>Flights with origin <%= origin %></h1>
+      <div id="flightBoard">
+        <div class="flightSearchContainer">
+          <% for (let i = 0; i < 5; i++) { %>
+            <div class="flightBox">
+              <p class="eachDest">Destination: <%= flights[i].destination %></p>
+              <div class="seedetailsbtn">
+                <input type="submit" id="displayInfoButton<%= i %>" class="displayInfoButton" value="See Details">
+              </div>
             </div>
-          </div>
-        <% } %>
-      </div>
-      <div class="flightDisplayContainer">
-        <% for (let i = 0; i < 5; i++) { %>
-          <div class="selectedBox" id="selectedBox<%= i %>">
-            <form class="saveFlight" action="/history" method="POST">
-              <p class="selectedFlight" id="selectedFlight<%= i %>"><span style="font-weight: bold; color: blue;">Destination:</span> <%= flights[i].destination %><br>
-              <span style="font-weight: bold; color: blue;">Departure: </span><%= flights[i].departure_date %><br>
-              <span style="font-weight: bold; color: blue;">Return: </span><%= flights[i].return_date %><br>
-              <span style="font-weight: bold; color: blue;">Price: </span>$<%= price[i] %><br><br>
-              <label> Reminders/Comments:<br>
-                <input type="text" id="reminderBox" class="reminderboxes" name="trips[reminders]">
-              </label></p>
-              <input type="hidden" name="trips[origin]" value="<%= origin %>">
-              <input type="hidden" name="trips[destination]" value="<%= flights[i].destination %>">
-              <input type="hidden" name="trips[departure_date]" value="<%= flights[i].departure_date %>">
-              <input type="hidden" name="trips[return_date]" value="<%= flights[i].return_date %>">
-              <input type="hidden" name="trips[price]" value="<%= price[i] %>">
-              <input type="submit" id="saveButton<%= i %>" class="saveButton" value="SAVE">
-            </form>
-          </div>
-        <% } %>
+          <% } %>
+        </div>
+        <div class="flightDisplayContainer">
+          <% for (let i = 0; i < 5; i++) { %>
+            <div class="selectedBox" id="selectedBox<%= i %>">
+              <form class="saveFlight" action="/history" method="POST">
+                <p class="selectedFlight" id="selectedFlight<%= i %>"><span style="font-weight: bold; color: blue;">Destination:</span> <%= flights[i].destination %><br>
+                <span style="font-weight: bold; color: blue;">Departure: </span><%= flights[i].departure_date %><br>
+                <span style="font-weight: bold; color: blue;">Return: </span><%= flights[i].return_date %><br>
+                <span style="font-weight: bold; color: blue;">Price: </span>$<%= price[i] %><br><br>
+                <label> Reminders/Comments:<br>
+                  <input type="text" id="reminderBox" class="reminderboxes" name="trips[reminders]">
+                </label></p>
+                <input type="hidden" name="trips[origin]" value="<%= origin %>">
+                <input type="hidden" name="trips[destination]" value="<%= flights[i].destination %>">
+                <input type="hidden" name="trips[departure_date]" value="<%= flights[i].departure_date %>">
+                <input type="hidden" name="trips[return_date]" value="<%= flights[i].return_date %>">
+                <input type="hidden" name="trips[price]" value="<%= price[i] %>">
+                <input type="submit" id="saveButton<%= i %>" class="saveButton" value="SAVE">
+              </form>
+            </div>
+          <% } %>
+        </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
