@@ -3,7 +3,7 @@
 
 ## Links:
 
-Heroky: https://find-flights-asap.herokuapp.com/
+Heroku: https://find-flights-asap.herokuapp.com/
 GitHub: https://github.com/svall/Flight-Mood
 
 
